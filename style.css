@@ -1,7 +1,48 @@
-.logo {
-    width: 40px !important;
-    float:left;
+header {
+    align-items: center; /* Centrar verticalmente el contenido */
+    justify-content: space-between; /* Espaciar entre el logo y el menú */
+    background-color: #ffffff; /* Blanco */
+    color: white;
+    padding: 20px; /* Agregar padding adecuado */
 }
+
+site-header_sticky {
+background-color: #fff;
+left: 0;
+position: fixed;
+right: 0;
+top: 0;
+width: 100%;
+z-index: 100;
+transition: .2s;
+}
+
+.site-header_sticky.sticky .site-logo { 
+    height: 45px; 
+}
+
+.site-header .site-logo { 
+    display: block;
+    height: 45px;
+    z-index: 40; 
+}
+
+@media (min-width: 62em) { 
+    .site-header .site-logo { height: 50px; } 
+}
+
+@media (min-width: 75em) {
+    .site-header .site-logo { height: 60px; } 
+}
+
+.site-header .site-logo img {
+    height: 100%;
+}
+
+.site-logo { 
+    color: #292929; 
+}
+
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
@@ -16,18 +57,6 @@ h1 {
     text-align: center;
 }
 
-/* Header Styles */
-header {
-    background-color: #ffffff; /* Blanco */
-    color: white;
-    padding: 50;
-    text-align: right;
-}
-
-nav ul {
-    list-style-type: none; /* Sin puntos de lista */
-    padding: 0;
-}
 
 nav ul li {
     display: inline; /* Muestra los elementos en línea */
@@ -228,4 +257,22 @@ footer {
 
 .button:hover {
     background-color: #ff8c00; /* Color más oscuro al pasar el mouse */
+}
+
+.breadcrumbs-hero {
+    left: 0;
+    margin-top: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+iframe {
+    border: 0; /* Eliminar bordes del iframe */
+    max-width: 100%; /* Hacer que el iframe sea responsivo */
+    height: auto; /* Ajustar altura automáticamente */
+    width: 100%; /* Inicialmente ocupará el 100% del contenedor */
+    max-width: 600px; /* Max ancho para el iframe */
+    position:static;
 }
